@@ -12,7 +12,17 @@
 </svelte:head>
 
 {#if ready}
-	<AppHeader />
-	<AppHero />
-	<ScrollIndicator />
+	<div class="parent-grid">
+		<AppHeader />
+		<AppHero />
+		<ScrollIndicator />
+	</div>
 {/if}
+
+<style>
+	.parent-grid {
+		display: grid;
+		height: 100vh;
+		grid-template-rows: 1fr 5fr 2fr;
+	}
+</style>

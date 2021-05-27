@@ -18,7 +18,7 @@
 			<p>I'm a web engineer</p>
 		</main>
 	</div>
-	<div class="grid-item col-4">
+	<div class="grid-item col-4 ">
 		<div
 			class="card"
 			in:fly={{
@@ -53,13 +53,13 @@
 <style>
 	.container {
 		display: grid;
-		grid-template-columns: repeat(7, 1fr);
-		height: 75vh;
+		grid-template-columns: repeat(7, calc(100vw / 7));
 	}
 
 	.grid-item {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 	}
 
 	.col-1 {
@@ -92,9 +92,7 @@
 	.card {
 		background-color: var(--light);
 		color: var(--dark);
-		padding: 1em;
-		width: max-content;
-		max-width: calc(100vw / 7);
+		padding: 2em;
 	}
 
 	h1 {
