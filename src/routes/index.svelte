@@ -31,7 +31,7 @@
 				class="card"
 				in:fly={{
 					delay: 100,
-					y: -100,
+					x: 100,
 					duration: 2000,
 					easing: expoOut
 				}}
