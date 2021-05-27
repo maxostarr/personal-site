@@ -54,7 +54,7 @@
 	.container {
 		display: grid;
 		grid-template-columns: repeat(7, 1fr);
-		height: 100%;
+		height: 75vh;
 	}
 
 	.grid-item {
