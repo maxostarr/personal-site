@@ -2,9 +2,9 @@
 
 :root {
   --light: #ece4d8;
-  --dark: #312335;
-  --accent-primary: #566580;
-  --accent-dark: #BF3B81;
+  --dark: #1b3153;
+  /* --accent-primary: #566580; */
+  --accent-primary: #BF3B81;
   --accent-light: #DBC865;
   --text-dark: hsl(0, 230, 0)
 }

@@ -2,6 +2,7 @@
 	import { fly } from 'svelte/transition';
 	import { expoOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
+	import AppHeader from '../components/app-header.svelte';
 	let ready = false;
 	onMount(() => setTimeout(() => (ready = true), 400));
 </script>
@@ -10,8 +11,10 @@
 	<title>Max Starr</title>
 </svelte:head>
 
-<div class="container">
-	{#if ready}
+{#if ready}
+	<AppHeader />
+
+	<div class="container">
 		<div class="grid-item col-2">
 			<main
 				class="card"
@@ -22,7 +25,7 @@
 				}}
 				out:fly
 			>
-				<h1>Hi, I'm Max</h1>
+				<h1>Hi, I'm <em>Max</em></h1>
 				<p>I'm a web engineer</p>
 			</main>
 		</div>
@@ -40,8 +43,8 @@
 				<img src="/max.png" alt="Max Starr" />
 			</div>
 		</div>
-	{/if}
-</div>
+	</div>
+{/if}
 
 <style>
 	.container {
@@ -61,6 +64,10 @@
 		grid-column: 3;
 	}
 
+	em {
+		font-style: normal;
+		color: var(--accent-primary);
+	}
 	.card {
 		background-color: var(--light);
 		color: var(--dark);
