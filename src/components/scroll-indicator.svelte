@@ -22,25 +22,26 @@ c-1.1,1.1-2.8,1.1-3.9,0L4.5,2L2.2,4.3C1.1,5.4,1.1,7,2.2,8.1l24.6,24.6C27.9,33.7,
 	/>
 </svg> -->
 
-<svg
-	in:fly={{
-		y: 100,
-		delay: 200,
-		duration: 2000,
-		easing: expoOut
-	}}
-	out:fly
-	xmlns="http://www.w3.org/2000/svg"
-	data-name="Layer 1"
-	viewBox="0 0 100 125"
-	x="0px"
-	y="0px"
-	><title>Scroll down</title><g>
-		<circle class="circle-1" cx="50" cy="28" r="6" />
-		<circle class="circle-2" cx="50" cy="50" r="6" />
-		<circle class="circle-3" cx="50" cy="72" r="6" />
-	</g>
-	<!-- <text
+<div>
+	<svg
+		in:fly={{
+			y: 100,
+			delay: 200,
+			duration: 2000,
+			easing: expoOut
+		}}
+		out:fly
+		xmlns="http://www.w3.org/2000/svg"
+		data-name="Layer 1"
+		viewBox="0 0 100 125"
+		x="0px"
+		y="0px"
+		><title>Scroll down</title><g>
+			<circle class="circle-1" cx="50" cy="28" r="6" />
+			<circle class="circle-2" cx="50" cy="50" r="6" />
+			<circle class="circle-3" cx="50" cy="72" r="6" />
+		</g>
+		<!-- <text
 		x="0"
 		y="115"
 		fill="#000000"
@@ -48,7 +49,7 @@ c-1.1,1.1-2.8,1.1-3.9,0L4.5,2L2.2,4.3C1.1,5.4,1.1,7,2.2,8.1l24.6,24.6C27.9,33.7,
 		font-weight="bold"
 		font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"
 		>Created by Gregor Cresnar</text
-	><text
+		><text
 		x="0"
 		y="120"
 		fill="#000000"
@@ -56,7 +57,8 @@ c-1.1,1.1-2.8,1.1-3.9,0L4.5,2L2.2,4.3C1.1,5.4,1.1,7,2.2,8.1l24.6,24.6C27.9,33.7,
 		font-weight="bold"
 		font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"
 		>from the Noun Project</text> -->
-</svg>
+	</svg>
+</div>
 
 <style>
 	@keyframes hideshow {
@@ -77,9 +79,12 @@ c-1.1,1.1-2.8,1.1-3.9,0L4.5,2L2.2,4.3C1.1,5.4,1.1,7,2.2,8.1l24.6,24.6C27.9,33.7,
 	svg {
 		width: 10em;
 		fill: var(--accent-light);
-		position: absolute;
-		bottom: 0;
-		left: calc(50vw - 5em);
+		/* position: absolute; */
+	}
+
+	div {
+		display: flex;
+		justify-content: center;
 	}
 
 	.circle-1 {
