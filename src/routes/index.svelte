@@ -6,6 +6,7 @@
 	import LLJSIDE from '../components/projects/lljside.svelte';
 	import SyncplayTwo from '../components/projects/syncplay-two.svelte';
 	import CapstoneProject from '../components/projects/capstone-project.svelte';
+	import AppFooter from '../components/app-footer.svelte';
 	let ready = false;
 	onMount(() => setTimeout(() => (ready = true), 400));
 </script>
@@ -25,6 +26,7 @@
 		<SyncplayTwo />
 		<CapstoneProject />
 	</div>
+	<AppFooter />
 {/if}
 
 <style>

@@ -11,7 +11,7 @@
 			<p>Made based off mobile-first design wireframes.</p>
 		</div>
 		<div>
-			<img src="/lljside.png" alt="low level javascript vm ide" />
+			<img src="/capstone.png" alt="low level javascript vm ide" />
 		</div>
 	</article>
 </section>
