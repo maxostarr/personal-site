@@ -69,13 +69,6 @@
 		color: var(--accent-primary);
 	}
 
-	.card {
-		background-color: var(--light);
-		color: var(--dark);
-		padding: 2em;
-		margin: 2em;
-	}
-
 	h1 {
 		color: var(--text-dark);
 	}
