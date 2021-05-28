@@ -1,6 +1,14 @@
 <script>
 	import { fly } from 'svelte/transition';
 	import { expoOut } from 'svelte/easing';
+
+	const scrollDown = () => {
+		console.log('scrolls');
+		window.scrollTo({
+			behavior: 'smooth',
+			top: window.innerHeight
+		});
+	};
 </script>
 
 <!-- <svg
@@ -31,6 +39,7 @@ c-1.1,1.1-2.8,1.1-3.9,0L4.5,2L2.2,4.3C1.1,5.4,1.1,7,2.2,8.1l24.6,24.6C27.9,33.7,
 			easing: expoOut
 		}}
 		out:fly
+		on:click={scrollDown}
 		xmlns="http://www.w3.org/2000/svg"
 		data-name="Layer 1"
 		viewBox="0 0 100 125"
