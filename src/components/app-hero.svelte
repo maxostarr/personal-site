@@ -45,7 +45,7 @@
 			out:fly
 		>
 			<h1>I want to do great work for <em>you</em></h1>
-			<p>I love solving hard problems and making an impact.</p>
+			<p>I love solving hard problems and making an impact</p>
 		</div>
 	</div>
 </div>
@@ -53,7 +53,8 @@
 <style>
 	.container {
 		display: grid;
-		grid-template-columns: repeat(3, calc(100vw / 3));
+		grid-template-columns: repeat(3, calc(100% / 3));
+		/* column-gap: 2em; */
 		/* display: flex;
 		justify-content: space-around; */
 	}
@@ -62,7 +63,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 2em;
 	}
 	em {
 		font-style: normal;
