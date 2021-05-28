@@ -88,6 +88,7 @@ c-1.1,1.1-2.8,1.1-3.9,0L4.5,2L2.2,4.3C1.1,5.4,1.1,7,2.2,8.1l24.6,24.6C27.9,33.7,
 	svg {
 		width: 10em;
 		fill: var(--accent-light);
+		cursor: pointer;
 		/* position: absolute; */
 	}
 
