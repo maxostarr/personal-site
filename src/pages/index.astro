@@ -1,13 +1,84 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to .">
-	<main>
-		<h1>Hi, I'm Max</h1>
-	</main>
+<Layout title="Max Starr">
+  <main>
+    <div class="background"></div>
+    <section>
+      <header>
+        <h1>Hi, I'm <span class="highlight">Max</span></h1>
+        <h2>I'm a software engineer</h2>
+      </header>
+
+      <p>
+        Based in Peoria Illinois, I'm currently working at <a
+          href="https://niksun.com/">NIKSUN</a
+        > as a full stack developer on the UI team.
+      </p>
+      <p>
+        <span class="highlight">UC Santa Cruz</span> graduate with a <span
+          class="highlight">B.S. in Computer Science</span
+        >. I'm passionate about creating software that is both functional and
+        beautiful. I love learning new technologies and applying them to solve
+        problems.
+      </p>
+    </section>
+  </main>
 </Layout>
 
 <style>
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
 
+  .background {
+    background-image: url("../images/glitch.webp");
+    background-size: cover;
+    background-position: center;
+    filter: blur(15px);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  section {
+    justify-content: flex-start;
+
+    width: 70vw;
+    height: 80vh;
+
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--night);
+
+    color: #dceaf0;
+  }
+
+  header {
+    margin-bottom: 5rem;
+  }
+
+  h1 {
+    font-size: 10rem;
+  }
+
+  h2 {
+    font-size: 5rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  .highlight {
+    color: var(--saffron);
+  }
 </style>
