@@ -5,24 +5,28 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Max Starr">
   <main>
     <div class="background"></div>
+    <div class="flying-square-1"></div>
+    <div class="flying-square-2"></div>
     <section>
       <header>
         <h1>Hi, I'm <span class="highlight">Max</span></h1>
         <h2>I'm a software engineer</h2>
       </header>
 
-      <p>
-        Based in Peoria Illinois, I'm currently working at <a
+      <div class="about">
+        <p>
+          Based in Peoria Illinois, I'm currently working at <a
           href="https://niksun.com/">NIKSUN</a
-        > as a full stack developer on the UI team.
-      </p>
-      <p>
-        <span class="highlight">UC Santa Cruz</span> graduate with a <span
+          > as a full stack developer on the UI team.
+        </p>
+        <p>
+          <span class="highlight">UC Santa Cruz</span> graduate with a <span
           class="highlight">B.S. in Computer Science</span
-        >. I'm passionate about creating software that is both functional and
-        beautiful. I love learning new technologies and applying them to solve
-        problems.
-      </p>
+          >. I'm passionate about creating software that is both functional and
+          beautiful. I love learning new technologies and applying them to solve
+          problems.
+        </p>
+      </div>
     </section>
   </main>
 </Layout>
@@ -50,28 +54,67 @@ import Layout from "../layouts/Layout.astro";
   }
 
   section {
-    justify-content: flex-start;
-
     width: 70vw;
     height: 80vh;
 
-    padding: 2rem;
-    border-radius: 1rem;
-    background-color: var(--night);
-
     color: #dceaf0;
+
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    > * {
+      padding: 2rem;
+      border-radius: .5rem;
+      background-color: var(--night);
+    }
   }
 
   header {
     margin-bottom: 5rem;
+
+    animation: fade-in-rtl 1s ease-in-out;
+  }
+
+  @keyframes fade-in-rtl {
+    0% {
+      opacity: 0;
+      transform: translateX(-10vh);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .about {
+    animation: fade-in-ltr 1s ease-in-out;
+  }
+
+  @keyframes fade-in-ltr {
+    0% {
+      opacity: 0;
+      transform: translateX(10vh);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .about {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
   }
 
   h1 {
-    font-size: 10rem;
+    font-size: 5vw;
   }
 
   h2 {
-    font-size: 5rem;
+    font-size: 3vw;
   }
 
   p {
@@ -80,5 +123,62 @@ import Layout from "../layouts/Layout.astro";
 
   .highlight {
     color: var(--saffron);
+  }
+
+
+  .flying-square-1,
+  .flying-square-2 {
+    position: absolute;
+    
+    width: 200px;
+    height: 200px;
+    
+    border-radius: .5rem;
+    
+    
+    /* background-color: var(--saffron); */
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .flying-square-1 { 
+    bottom: 10vh;
+    left: 10vw;
+    animation: flying-square-1 10s infinite ease-in-out;
+  }
+
+  .flying-square-2 {
+    top: 10vh;
+    right: 10vw;
+    animation: flying-square-2 9s infinite 1s ease-in-out ;
+    animation-direction: reverse;
+  }
+
+  @keyframes flying-square-1 {
+    0% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    50% {
+      transform: translate(20vw, -10vh) rotate(180deg) scale(1.5);
+    }
+
+    100% {
+      transform: translate(0, 0) rotate(360deg) scale(1);
+    }
+  }
+
+  @keyframes flying-square-2 {
+    0% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    50% {
+      transform: translate(-20vw, 10vh) rotate(180deg) scale(1.5);
+    }
+
+    100% {
+      transform: translate(0, 0) rotate(360deg) scale(1);
+    }
   }
 </style>
