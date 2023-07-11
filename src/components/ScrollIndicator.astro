@@ -1,0 +1,33 @@
+<div class="circle-container">
+  <div class="chevron"></div>
+</div>
+
+<style>
+  .circle-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+  }
+
+  .chevron::before {
+    border-style: solid;
+    border-width: 0.25em 0.25em 0 0;
+    content: "";
+    display: inline-block;
+    height: 0.45em;
+    /* left: 0.15em; */
+    position: relative;
+    top: 0.15em;
+    transform: rotate(135deg);
+    vertical-align: top;
+    width: 0.45em;
+  }
+</style>

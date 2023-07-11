@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ScrollIndicator from "../components/ScrollIndicator.astro";
 ---
 
 <Layout title="Max Starr">
@@ -16,18 +17,21 @@ import Layout from "../layouts/Layout.astro";
       <div class="about">
         <p>
           Based in Peoria Illinois, I'm currently working at <a
-          href="https://niksun.com/">NIKSUN</a
+            href="https://niksun.com/">NIKSUN</a
           > as a full stack developer on the UI team.
         </p>
         <p>
           <span class="highlight">UC Santa Cruz</span> graduate with a <span
-          class="highlight">B.S. in Computer Science</span
+            class="highlight">B.S. in Computer Science</span
           >. I'm passionate about creating software that is both functional and
           beautiful. I love learning new technologies and applying them to solve
           problems.
         </p>
       </div>
     </section>
+    <div class="scroll-indicator">
+      <ScrollIndicator />
+    </div>
   </main>
 </Layout>
 
@@ -59,13 +63,13 @@ import Layout from "../layouts/Layout.astro";
 
     color: #dceaf0;
 
-    display:grid;
+    display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
 
     > * {
       padding: 2rem;
-      border-radius: .5rem;
+      border-radius: 0.5rem;
       background-color: var(--night);
     }
   }
@@ -125,23 +129,21 @@ import Layout from "../layouts/Layout.astro";
     color: var(--saffron);
   }
 
-
   .flying-square-1,
   .flying-square-2 {
     position: absolute;
-    
+
     width: 200px;
     height: 200px;
-    
-    border-radius: .5rem;
-    
-    
+
+    border-radius: 0.5rem;
+
     /* background-color: var(--saffron); */
     backdrop-filter: blur(15px);
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
   }
 
-  .flying-square-1 { 
+  .flying-square-1 {
     bottom: 10vh;
     left: 10vw;
     animation: flying-square-1 10s infinite ease-in-out;
@@ -150,7 +152,7 @@ import Layout from "../layouts/Layout.astro";
   .flying-square-2 {
     top: 10vh;
     right: 10vw;
-    animation: flying-square-2 9s infinite 1s ease-in-out ;
+    animation: flying-square-2 9s infinite 1s ease-in-out;
     animation-direction: reverse;
   }
 
@@ -180,5 +182,10 @@ import Layout from "../layouts/Layout.astro";
     100% {
       transform: translate(0, 0) rotate(360deg) scale(1);
     }
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: -50px;
   }
 </style>
