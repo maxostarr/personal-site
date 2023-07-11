@@ -29,7 +29,7 @@
 			}}
 			out:fly
 		>
-			<img src="/max.png" alt="Max Starr" />
+			<img src="/max.jpg" alt="Max Starr" />
 		</div>
 	</div>
 
