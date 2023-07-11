@@ -2,10 +2,10 @@
 	<article>
 		<div>
 			<h1><a href="https://v2.lljside.maxstarr.xyz/" target="_">LLJSVM IDE</a></h1>
-			<p>An IDE for the JS virtual machine being created by LLJS on YouTube</p>
+			<p>An IDE for the JS virtual machine created by Low Byte Productions on YouTube</p>
 		</div>
 		<div>
-			<img src="/lljside.png" alt="low level javascript vm ide" />
+			<img src="/lljside.png" alt="low byte productions vm ide" />
 		</div>
 	</article>
 </section>
