@@ -1,6 +1,7 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import ScrollIndicator from "../components/ScrollIndicator.astro";
+import Layout from "../layouts/Layout.astro"
+import ScrollIndicator from "../components/ScrollIndicator.astro"
+import Projects from "../components/Projects.astro"
 ---
 
 <Layout title="Max Starr">
@@ -29,10 +30,11 @@ import ScrollIndicator from "../components/ScrollIndicator.astro";
         </p>
       </div>
     </section>
-    <div class="scroll-indicator">
+    <!-- <div class="scroll-indicator">
       <ScrollIndicator />
-    </div>
+    </div> -->
   </main>
+  <Projects />
 </Layout>
 
 <style>
@@ -41,7 +43,7 @@ import ScrollIndicator from "../components/ScrollIndicator.astro";
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
   }
 
   .background {
@@ -49,7 +51,7 @@ import ScrollIndicator from "../components/ScrollIndicator.astro";
     background-size: cover;
     background-position: center;
     filter: blur(15px);
-    height: 100%;
+    height: 80%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -59,7 +61,7 @@ import ScrollIndicator from "../components/ScrollIndicator.astro";
 
   section {
     width: 70vw;
-    height: 80vh;
+    height: 80%;
 
     color: #dceaf0;
 
@@ -83,7 +85,7 @@ import ScrollIndicator from "../components/ScrollIndicator.astro";
   @keyframes fade-in-rtl {
     0% {
       opacity: 0;
-      transform: translateX(-10vh);
+      transform: translateX(10vh);
     }
 
     100% {
@@ -99,7 +101,7 @@ import ScrollIndicator from "../components/ScrollIndicator.astro";
   @keyframes fade-in-ltr {
     0% {
       opacity: 0;
-      transform: translateX(10vh);
+      transform: translateX(-10vh);
     }
 
     100% {
@@ -121,10 +123,6 @@ import ScrollIndicator from "../components/ScrollIndicator.astro";
     font-size: 3vw;
   }
 
-  p {
-    font-size: 2rem;
-  }
-
   .highlight {
     color: var(--saffron);
   }
@@ -144,7 +142,7 @@ import ScrollIndicator from "../components/ScrollIndicator.astro";
   }
 
   .flying-square-1 {
-    bottom: 10vh;
+    bottom: 25vh;
     left: 10vw;
     animation: flying-square-1 10s infinite ease-in-out;
   }
